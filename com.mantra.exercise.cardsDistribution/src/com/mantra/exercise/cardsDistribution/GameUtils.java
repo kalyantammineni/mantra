@@ -6,12 +6,7 @@ import java.util.Random;
 import com.mantra.exercise.cards.Card;
 
 public class GameUtils {
-	
-//	MyCard cardEnum;
-//	public GameUtils(MyCard cardEnum) {
-//		this.cardEnum = cardEnum;
-//	}
-//	
+
 	static enum MyCard {
 		ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
 	}
@@ -39,36 +34,67 @@ public class GameUtils {
 	 * 
 	 * @return
 	 */
-	public int countBooks(List<Card> cards) {
-//		suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-		
-		int bookCount = 0;
-		int clubs = 0, diams = 0, hearts = 0, spades = 0;
-		int clubBook = 0, diamBook = 0, heartBook = 0, spadesBook = 0;
+	public static int countBooks(List<Card> cards) {
+
+		int aces = 0, twos = 0, threes = 0, fours = 0, fives = 0, sixes = 0, sevens = 0, eights = 0, nines = 0,
+				tens = 0, jacks = 0, queens = 0, kings = 0;
+		int books = 0;
 		
 		for (Card card : cards) {
-
 			int cardValue = card.getCardValue();
 			MyCard cardE = MyCard.values()[cardValue];
+			
 			switch (cardE) {
-			case ACE: // Clubs
-				clubs++;
-				clubBook+=cardValue;
+			case ACE:
+				aces++;
+				break;
+
+			case TWO:
+				twos++;
+				break;
+
+			case THREE:
+				threes++;
+				break;
+
+			case FOUR:
+				fours++;
+				break;
+
+			case FIVE:
+				fives++;
 				break;
 				
-			case TWO: // Diamonds
-				diams++;
-				diamBook+=cardValue;
+			case SIX:
+				sixes++;
 				break;
 				
-			case THREE: // Hearts
-				hearts++;
-				heartBook+=cardValue;
+			case SEVEN:
+				sevens++;
 				break;
 				
-			case FOUR: // Spades
-				spades++;
-				spadesBook+=cardValue;
+			case EIGHT:
+				eights++;
+				break;
+				
+			case NINE:
+				nines++;
+				break;
+				
+			case TEN:
+				tens++;
+				break;
+				
+			case JACK:
+				jacks++;
+				break;
+				
+			case QUEEN:
+				queens++;
+				break;
+				
+			case KING:
+				kings++;
 				break;
 				
 			default:
@@ -76,6 +102,10 @@ public class GameUtils {
 
 			}
 		}
-		return 0;
+		if (aces == 3 || twos == 3 || threes == 3 || fours == 3 || fives == 3 || sixes == 3 || sevens == 3
+				|| eights == 3 || nines == 3 || tens == 3 || jacks == 3 || queens == 3 || kings == 3) {
+			books++;
+		}
+		return books;
 	}
 }

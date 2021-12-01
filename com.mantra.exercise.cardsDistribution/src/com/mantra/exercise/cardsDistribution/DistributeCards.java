@@ -51,30 +51,38 @@ public class DistributeCards {
 		for (Card card : player1) {
 			System.out.println(card.toString());
 		}
+		int player1Books = GameUtils.countBooks(player1);
+		System.out.println("No of books for Player1:" +player1Books);
 		
 		// Print all the players cards
 		System.out.println("********** Cards of Player2 *********");
 		for (Card card : player2) {
 			System.out.println(card.toString());
 		}
+		int player2Books = GameUtils.countBooks(player2);
+		System.out.println("No of books for Player2:" +player2Books);
 		
 		// Print all the players cards
 		System.out.println("********** Cards of Player3 ******");
 		for (Card card : player3) {
 			System.out.println(card.toString());
 		}
+		int player3Books = GameUtils.countBooks(player3);
+		System.out.println("No of books for Player3:" +player3Books);
 		
 		// Print all the players cards
 		System.out.println("********** Cards of Player4 **********");
 		for (Card card : player4) {
 			System.out.println(card.toString());
 		}
+		int player4Books = GameUtils.countBooks(player4);
+		System.out.println("No of books for Player4:" +player4Books);
 		
 		// Print all the remaining cards
 		System.out.println("********** Cards Remaining: *********");
 		System.out.println("Remaining Size of shuffledCards: " + shuffledCards.size());
-		for (Card card : shuffledCards) {
-			System.out.println(card.toString());
-		}
+//		for (Card card : shuffledCards) {
+//			System.out.println(card.toString());
+//		}
 	}
 }
