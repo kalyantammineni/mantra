@@ -47,64 +47,73 @@ public class GameUtils {
 			switch (cardE) {
 			case ACE:
 				aces++;
+				if(aces==3) books++;
 				break;
 
 			case TWO:
 				twos++;
+				if(twos==3) books++;
 				break;
 
 			case THREE:
 				threes++;
+				if(threes==3) books++;
 				break;
 
 			case FOUR:
 				fours++;
+				if(fours==3) books++;
 				break;
 
 			case FIVE:
 				fives++;
+				if(fives==3) books++;
 				break;
 				
 			case SIX:
 				sixes++;
+				if(sixes==3) books++;
 				break;
 				
 			case SEVEN:
 				sevens++;
+				if(sevens==3) books++;
 				break;
 				
 			case EIGHT:
 				eights++;
+				if(eights==3) books++;
 				break;
 				
 			case NINE:
 				nines++;
+				if(nines==3) books++;
 				break;
 				
 			case TEN:
 				tens++;
+				if(tens==3) books++;
 				break;
 				
 			case JACK:
 				jacks++;
+				if(jacks==3) books++;
 				break;
 				
 			case QUEEN:
 				queens++;
+				if(queens==3) books++;
 				break;
 				
 			case KING:
 				kings++;
+				if(kings==3) books++;
 				break;
 				
 			default:
 				break;
 
 			}
-		}
-		if (aces == 3 || twos == 3 || threes == 3 || fours == 3 || fives == 3 || sixes == 3 || sevens == 3
-				|| eights == 3 || nines == 3 || tens == 3 || jacks == 3 || queens == 3 || kings == 3) {
-			books++;
 		}
 		return books;
 	}
